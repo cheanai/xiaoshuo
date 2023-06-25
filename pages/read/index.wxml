@@ -1,0 +1,23 @@
+<!-- pages/read/index.wxml -->
+<view class="container">
+  <view class="top">
+    <text class="top">{{chapter_name}}</text>
+  </view>
+  <!-- 阅读区域。点击时调用 toggleSettings 显示或隐藏设置区域。 -->
+  <view class="content">
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="height: calc(100vh - 60px);">
+      <view class="text" style="font-size:{{fontSize}}px">{{content}}</view>
+      <view class="center-area" bindtap="toggleSettings"></view>
+      <view class="chapter-navigation" wx:if="{{!isLoading}}">
+        <button bindtap="prevChapter">上一章</button>
+        <button bindtap="nextChapter">下一章</button>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 阅读设置区域。使用 wx:if 控制其显示和隐藏。 -->
+  <view class="settings" wx:if="{{showSettings}}">
+    <button bindtap="BookDirectory">目录</button>
+    <text>字号:</text>
+    <slider bindchange="changeFontSize" value="{{fontSize}}" show-value min="10" max="30"></slider>
+  </view>
+</view>

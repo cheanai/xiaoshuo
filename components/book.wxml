@@ -1,0 +1,11 @@
+<!--components/book.wxml-->
+<view class="book-container" bindtap="onBookTap">
+    <view class="book-header">
+        <text class="book-name">{{bookName}}</text>
+        <text class="book-author">{{bookAuthor}}</text>
+    </view>
+    <view class="book-content">
+        <text class="latest-chapter">{{latestChapter}}</text>
+    </view>
+</view>
+

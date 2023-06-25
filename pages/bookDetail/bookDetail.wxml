@@ -1,0 +1,18 @@
+<!-- pages/bookDetail/index.wxml -->
+<view class="container">
+  <view class="name">
+    <text class="name">{{bookName}}</text>
+  </view>
+  <view class="author">
+    <text class="author">{{bookAuthor}}</text>
+  </view>
+  <view class="content">
+    <text class="description">{{bookDescription}}</text>
+  </view>
+  <view class="bottom" wx:if="{{!isLoading}}">
+    <button class="btn" wx:if="{{!isInShelf}}" bindtap="addToShelf">添加到书架</button>
+    <button class="btn" wx:if="{{isInShelf}}" bindtap="removeFromShelf">从书架中移除</button>
+    <button class="btn" wx:if="{{!isInShelf}}" bindtap="startReading">开始阅读</button>
+    <button class="btn" wx:if="{{isInShelf}}" bindtap="continueReading">继续阅读</button>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="container">
+  <!-- 书名 -->
+  <view class="header">
+    <text class="title">{{bookName}}</text>
+  </view>
+  
+  <!-- 目录 -->
+  <scroll-view class="directory" scroll-y="true">
+    <block wx:for="{{directoryList}}" wx:key="*this">
+      <view class="directory-item" bindtap="navigateToChapter" data-chapter-id="{{item.id}}">
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

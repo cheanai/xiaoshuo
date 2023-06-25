@@ -1,0 +1,11 @@
+<!--pages/bookshelf/index.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">我的书架</text>
+  </view>
+
+  <scroll-view class="bookshelf" scroll-y="true" bindscrolltolower="loadMore" enable-back-to-top="true">
+    <mybook wx:for="{{books}}" wx:key="*this" book-id="{{item.id}}" book-name="{{item.name}}" book-author="{{item.author}}" latest-chapter="{{item.latestChapter}}"></mybook>
+  </scroll-view>
+
+</view>

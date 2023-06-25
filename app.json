@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/bookshelf/index",
+    "pages/search/index",
+    "pages/me/index",
+    "pages/bookDetail/bookDetail",
+    "pages/read/index",
+    "pages/BookDirectory/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/bookshelf/index",
+        "iconPath": "images/bookshelf.png",
+        "selectedIconPath": "images/bookshelf-active.png"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-active.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-active.png"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#00f",
+    "backgroundColor": "#fff",
+    "borderStyle": "black"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
